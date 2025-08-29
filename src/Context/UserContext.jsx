@@ -1,15 +1,8 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 
 export let UserContext = createContext();
-
 export default function UserContextProvider(props) {
-  const [userLogin, setuserLogin] = useState(  localStorage.getItem("userToken")  );
-
-//   useEffect(() => {
-//     if (localStorage.getItem("userToken")) {
-//       setuserLogin(localStorage.getItem("userToken"));
-//     }
-//   }, []);
+  const [userLogin, setuserLogin] = useState(localStorage.getItem("userToken"));
 
   return (
     <UserContext.Provider value={{ userLogin, setuserLogin }}>

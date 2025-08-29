@@ -8,7 +8,7 @@ export default function Layout() {
   return (
     <>
       <Navbar />
-      <div className="container  mx-auto ">
+      <div className="mx-auto pt-15 ">
         <Outlet />
       </div>
       <Footer />
