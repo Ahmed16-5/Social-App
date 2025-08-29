@@ -85,7 +85,7 @@
 //                         onClick={signout}
 //                         className="block cursor-pointer px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
 //                       >
-//                         <i className="fa-solid fa-right-from-bracket me-2"></i>
+//                         
 //                         Sign out
 //                       </span>
 //                     </li>
@@ -187,7 +187,7 @@ export default function Navbar() {
                       to="/profile"
                       className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
                     >
-                      Profile
+                      <i className="fa-solid fa-user me-2"></i> Profile
                     </Link>
                   </li>
                   <li>
@@ -195,7 +195,7 @@ export default function Navbar() {
                       onClick={signout}
                       className="block cursor-pointer px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
                     >
-                      Sign out
+                      <i className="fa-solid fa-right-from-bracket me-2"></i> Sign out
                     </span>
                   </li>
                 </ul>
