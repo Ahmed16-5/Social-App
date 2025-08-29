@@ -7,7 +7,11 @@ import axios from "axios";
 export default function Navbar() {
   const navigate = useNavigate();
   const { userLogin, setuserLogin } = useContext(UserContext);
-  const [openDropdown, setOpenDropdown] = useState(false); // <- هنا
+  const [openDropdown, setOpenDropdown] = useState(false); 
+
+   useEffect(() => {
+    setOpenDropdown(false);
+  }, [userLogin]);
 
   function getProfileData() {
     return axios.get(`https://linked-posts.routemisr.com/users/profile-data`, {
@@ -42,14 +46,14 @@ export default function Navbar() {
               <button
                 type="button"
                 className="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
-                onClick={() => setOpenDropdown(!openDropdown)} // <- هنا
+                onClick={() => setOpenDropdown(!openDropdown)}
               >
                 <span className="sr-only">Open user menu</span>
                 <img className="w-8 h-8 rounded-full" src={data?.photo} alt="user photo" />
               </button>
 
               <div
-                className={`z-50 my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-700 dark:divide-gray-600 absolute right-0 mt-2 ${
+                className={`z-50 my-4 mt-3 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-700 dark:divide-gray-600 absolute right-0  ${
                   openDropdown ? "block" : "hidden"
                 }`}
               >
