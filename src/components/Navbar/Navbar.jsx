@@ -9,10 +9,6 @@ export default function Navbar() {
   const { userLogin, setuserLogin } = useContext(UserContext);
   const [openDropdown, setOpenDropdown] = useState(false); 
 
-   useEffect(() => {
-    setOpenDropdown(false);
-  }, [userLogin]);
-
   function getProfileData() {
     return axios.get(`https://linked-posts.routemisr.com/users/profile-data`, {
       headers: { token: localStorage.getItem("userToken") },
@@ -53,7 +49,7 @@ export default function Navbar() {
               </button>
 
               <div
-                className={`z-50 my-4 mt-3 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-700 dark:divide-gray-600 absolute right-0  ${
+                className={`z-50 my-4  text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-700 dark:divide-gray-600 absolute right-0 mt-2 ${
                   openDropdown ? "block" : "hidden"
                 }`}
               >
