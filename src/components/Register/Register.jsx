@@ -431,6 +431,7 @@ export default function Register() {
             <input
               type="date"
               id="dateOfBirth"
+              placeholder="Enter your date of birth"
               {...register("dateOfBirth")}
               className="block w-full border border-gray-300 rounded-lg px-4 py-2 focus:border-blue-500 focus:ring focus:ring-blue-200 outline-none"
             />
