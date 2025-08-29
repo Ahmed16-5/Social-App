@@ -433,7 +433,7 @@ export default function Register() {
               id="dateOfBirth"
               placeholder="Enter your date of birth"
               {...register("dateOfBirth")}
-              className="block w-full border border-gray-300 rounded-lg px-4 py-2 focus:border-blue-500 focus:ring focus:ring-blue-200 outline-none"
+              className=" w-full max-w-md p-2 text-base  border border-gray-300 rounded-lg px-4 py-2 focus:border-blue-500 focus:ring focus:ring-blue-200 outline-none"
             />
             {formState.errors.dateOfBirth &&
               formState.touchedFields.dateOfBirth && (
