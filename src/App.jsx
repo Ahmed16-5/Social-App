@@ -65,6 +65,14 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+
+
+
+  useEffect(() => {
+    if (window?.flowbite) {
+      window.flowbite.initFlowbite(); 
+    }
+  }, []); 
   const [count, setCount] = useState(0);
 
   return (
